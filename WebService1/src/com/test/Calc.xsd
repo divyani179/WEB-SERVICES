@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Calc" xmlns:sum="http://www.example.org/Calc" elementFormDefault="qualified">
+
+<xs:element name="calculator">
+<xs:complexType>
+<xs:sequence>
+<xs:element ref="sum:AddRequest"></xs:element>
+<xs:element ref="sum:AddResponse"></xs:element>
+
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="AddRequest">
+<xs:complexType>
+
+<xs:sequence>
+
+<xs:element name="input1" type="xs:int"></xs:element>
+<xs:element name="input2" type="xs:int"></xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="AddResponse">
+<xs:complexType>
+
+<xs:sequence>
+
+<xs:element name="output" type="xs:int"></xs:element>
+
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+
+</xs:schema>
